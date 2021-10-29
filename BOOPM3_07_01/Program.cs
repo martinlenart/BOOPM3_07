@@ -23,10 +23,14 @@ namespace BOOPM3_07_01
             int? c = a + b;   // c is null - equivalent to a + (int?)b
             Console.WriteLine(c); // null
 
-            // ? operator
+            // ?. operator
+            string s1 = null;
+            Console.WriteLine(s1?.Length);
+
             System.Text.StringBuilder sb = null;
             int? length = sb?.ToString().Length;
             Console.WriteLine(length);   // null
+
 
             // The ?? operator 
             int? x1 = null;

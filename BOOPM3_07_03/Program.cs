@@ -4,6 +4,13 @@ namespace BOOPM3_07_03
 {
     class Program
     {
+        /// <summary>
+        /// Makes a division with x and y. Both x and y must not be equal to 0. 
+        /// Otherwise DivideByZeroException is thrown
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
         static double SafeDivision(double x, double y)
         {
             if ((x, y) == (0, 0))
