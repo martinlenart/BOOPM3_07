@@ -17,13 +17,15 @@ namespace BOOPM3_07_06
 
             return factor;
         }
-        static long FactorialRecursive(long number)
+        static long FactorialRecursive(long number, int exp)
         {
             //base case, Viewpoint A
             if (number <= 0) return 1;
 
             //action case and recursive case, Viewpoint B
-            var factor = number * FactorialRecursive(number - 1);
+            //var factor = number * number * FactorialRecursive(number - 1);
+
+            long factor = (long) Math.Pow(number, exp) * FactorialRecursive(number - 1, exp);
 
             // Viewpoint C
             return factor;
@@ -36,8 +38,8 @@ namespace BOOPM3_07_06
             var result = FactorialIterative(number);
             Console.WriteLine($"{number}! = {result}");
 
-            Console.WriteLine("\n\nFactorialRecusrsive");
-            result = FactorialRecursive(number);
+            Console.WriteLine("\n\nFactorialRecursive");
+            result = FactorialRecursive(number, 3);
             Console.WriteLine($"{number}! = {result}");
         }
     }

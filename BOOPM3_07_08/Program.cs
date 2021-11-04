@@ -31,6 +31,21 @@ namespace BOOPM3_07_08
             return sum + CountSpaceRecursive(mystring, idx + 1);
         }
 
+        static int CountWordRecursive(string[] mySentence, string word, int idx = 0)
+        {
+            //base case
+            if (idx >= mySentence.Length)
+                return 0;
+
+            //action case
+            var sum = 0;
+            if (mySentence[idx] == word)
+                sum = 1;
+
+            //recursive
+            return sum + CountWordRecursive(mySentence, word, idx + 1);
+        }
+
         static void Main(string[] args)
         {
             var startString = "the quick brown fox catches the rabbit";
@@ -39,6 +54,13 @@ namespace BOOPM3_07_08
 
             Console.WriteLine("\nCountSpaceRecursive");
             Console.WriteLine($"Nr of spaces: {CountSpaceRecursive(startString)}");
+
+            Console.WriteLine("\nCountWordRecursive");
+            string[] sentence = "The quick quick brown fox catches another fox".Split(' ');
+            string find = "black";
+
+            Console.WriteLine($"Nr of {find}: {CountWordRecursive(sentence, find)}");
+
         }
     }
 }

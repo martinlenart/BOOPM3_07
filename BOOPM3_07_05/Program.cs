@@ -16,11 +16,11 @@ namespace BOOPM3_07_05
             //base case
             if (number < -10) return;
 
-            //action case
-            Console.Write($"{number,3}");
-
             //recursive case
             CountDownRecursive(number - 2);
+
+            //action case
+            Console.Write($"{number,3}");
         }
 
         static void Main(string[] args)
