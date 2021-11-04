@@ -14,6 +14,7 @@ namespace BOOPM3_07_09
 
                 Console.WriteLine($"{dir1}");
 
+                
                 #region get second level directories
                 try
                 {
@@ -21,7 +22,7 @@ namespace BOOPM3_07_09
                     foreach (var dir2 in Directory.EnumerateDirectories(dir1))
                     {
                         Console.WriteLine($"{dir2}");
-
+                
                         #region get third level directories
                         try
                         {
@@ -36,6 +37,7 @@ namespace BOOPM3_07_09
                             continue;
                         }
                         #endregion
+                
                     }
                 }
                 catch (UnauthorizedAccessException)
@@ -43,6 +45,7 @@ namespace BOOPM3_07_09
                     continue;
                 }
                 #endregion
+                
             }
         }
 

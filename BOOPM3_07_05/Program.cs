@@ -14,13 +14,13 @@ namespace BOOPM3_07_05
         static void CountDownRecursive(int number)
         {
             //base case
-            if (number < 0) return;
+            if (number < -10) return;
 
             //action case
             Console.Write($"{number,3}");
 
             //recursive case
-            CountDownRecursive(number - 1);
+            CountDownRecursive(number - 2);
         }
 
         static void Main(string[] args)
@@ -33,3 +33,7 @@ namespace BOOPM3_07_05
         }
     }
 }
+
+//Exercise
+//1.    In CountDownRecursive move the action case to happen after the recursive case. Compile and execute.
+//      - Can you explain what happens and why the number sequence changes

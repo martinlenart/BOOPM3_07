@@ -21,7 +21,7 @@ namespace BOOPM3_07_11
 
         static void Main(string[] args)
         {
-            long nrOfStairs = 40;
+            long nrOfStairs = 20;
             Console.WriteLine($"Nr of ways to climb the staircase: {NrOfPaths(nrOfStairs):N0}");
         }
     }

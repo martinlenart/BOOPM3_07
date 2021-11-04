@@ -40,3 +40,6 @@ namespace BOOPM3_07_07
         }
     }
 }
+//Exercise
+//1.    Make a recursive method SumArraysRecursive that takes two double[] as parameters and adds the two arrays element by element,
+//      returning one double bvalue at the end

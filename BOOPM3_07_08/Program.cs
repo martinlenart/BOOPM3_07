@@ -22,7 +22,10 @@ namespace BOOPM3_07_08
                 return 0;
 
             //action
-            var sum = mystring[idx] == ' ' ? 1 : 0;
+            //var sum = mystring[idx] == ' ' ? 1 : 0;
+            var sum = 0;
+            if (mystring[idx] == ' ')
+                sum = 1;
 
             //recursive case
             return sum + CountSpaceRecursive(mystring, idx + 1);
@@ -39,3 +42,8 @@ namespace BOOPM3_07_08
         }
     }
 }
+//Exercises:
+//1.    Make a method that takes a string[] as parameter and recursively counts the number of occurances of a particular string in the array.
+//2.    Make a method that takes a string[] as parameter and recursively search for an occurances of a particular string
+//      in the array and returns true or false depending on success. Index of the found string should be given as out parameter
+
